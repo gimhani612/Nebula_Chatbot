@@ -13,6 +13,11 @@ const sessionClient = new SessionsClient({
   keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS,
 });
 
+// Route for the root URL to prevent 404 errors
+app.get("/", (req, res) => {
+  res.send("Welcome to the Nebula Chatbot! The server is running.");
+});
+
 // Handle POST requests from Dialogflow webhook
 app.post("/webhook", async (req, res) => {
   const sessionId = req.body.session;
