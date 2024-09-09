@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "nebula-chatbot-434502",
+  "private_key_id": "b8ceb1dfc6ebb6268274490baa405d8e4763628f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCV/bDunF971R0O\nzgHziCs3AXGj/+MTPX2lGiGsFfhXdMBBQEYtTFCIo094vxb805PueSymq1YgDkcy\n/8zn6My93UNSrpq55JS/SYLL3fF2BKjlrI31VjrN12j85zWPY1xBTzMkPgzIJkml\n7zBqFVa9DijiQNEqV7rvIqeWDxxquuCsEMnXB2rCQr5r4CfHZqMFWTsaLNrXdMtn\ndsUtm3qYMN2anCy4BKa0XwW0knaYfhYs/iXuzV4MyXKdoThIWVkMtWrHIRnSOOCg\n2p+4Y3sY5jHMJ0qxD8Zl8BT8gkNMNhMqmeGBfhwnEMNpVA8bFnbkMm0JCrdUkSJN\n4lXMkzlhAgMBAAECggEALz0hmtzcA7O4fZ+rJKiXt7C4OkcOnNIqfrOutDSNLPoj\nzMkx8PVOjeIlVumUE1eNiTdXtTxUGS92BB1lSwraZNfJasJ8D5zqrh44V/3UHO/V\nw9QnN4QLbCXyNmiZSUopVZZcjIcQXn8UhfLBpD+JPGy3up5gYf4UbVlUP6INuJ0b\n97FcykNXFNmzYSKgHjgF3vfsBrUn7bdbFObfbjkthASU9pGEpX28YovwW61CASrG\nHAfu3JIdgnMcWO8XkBOLcl6kFXg6O67HPCxIskaqG2uwy4dllBc012U0NTemATiQ\naf7RSSjIdchclXa8uSRbb6pVOpDlJN0OGQ8Ed1dhSwKBgQDTii1dGgH59ioeCdbr\nH5CNMgK1DfkAsOgygyYGfoa10vP8NhVrvAkt+a+Zt1EUhjT8ARhgsPfMrFGGFv3T\nSy8ji82oCdeiTD4TAfvaUawJ2hL4pTl9Mx7iCeSRkI17f7uSGZWX7ttPxdUMVBKw\nas27SU1VhDCLvhRcl0J181dJQwKBgQC1g+dTXevRf+CjLPVPBq3BpdjaMV8ZWcNW\n6XaQJbzEjqO0wmQZBoUbZQifu3nIVvNAuMfJvM1QFNwHieake6QfPdegD08dJTAn\npZxjALx8TSvjYLYQLP8suPD+sbFUzswIRMbnBtF8umyL8SpZE+1d27PPhzUMlwyb\nqp3+vU+miwKBgQDANI2RSV9AWi3ciz4u9sglsqoJDkAQI61msAkt32rQ7HLp185Q\nzFJe5r5p4cmW53Ze/zPCLymIW43bUyqgAHE9T/q10vONsM66AJRwwsKZVP7l02JP\n4tINucVnibsz2lR4pCxrFwlIC03P3Nf6WaDCqhDNQcXGQxhHJNyrRUYq9wKBgEuR\n9/wwbR6Sw96LuDHHkQ2/U5I73eD7CyWjG1aWL4oR7Lwz9mKo4T/vh3ChJ+mtsaav\nh5ZJAZ2moZiN5DV0uHa9U4ly9jgnJG5NN9fMFa0WoAARYptHcJGZCdSv/ClX04BZ\nygmjQBJStyBoLn5ZmohqEOmE3CQ6uugQV6kX/hJTAoGAPa9PV91KAGUmsvqUoeoT\nn2qifL5PN91YgRJErbnYMUX6tEK+njrXd1aIha54Lx5FXYvKcVleR+Tt5Tj76Dxf\nSgkw1oSjv1dlVr9qwhH4Yha7HW7cWaVglDvmQ3vjN4w80wRhQT1//aPwphIrUuu1\n0SQ+jj4p2YhdypXPgwLQUkY=\n-----END PRIVATE KEY-----\n",
+  "client_email": "dialogflow-service-account@nebula-chatbot-434502.iam.gserviceaccount.com",
+  "client_id": "115355894732056835083",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dialogflow-service-account%40nebula-chatbot-434502.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
