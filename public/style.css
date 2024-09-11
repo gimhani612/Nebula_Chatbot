@@ -9,19 +9,18 @@ body {
 /* Chatbot Container with Galaxy Background */
 #chat-container {
   position: fixed;
-  bottom: 0;
+  bottom: 20px;
   right: 20px;
   width: 350px;
-  height: 500px; /* Fixed height for the chatbot */
+  height: 500px; /* Fixed height */
+  display: flex;
+  flex-direction: column; /* Ensure chat input stays at the bottom */
   background: url("https://m.media-amazon.com/images/I/81SNLEuNQuL._AC_UF894,1000_QL80_.jpg")
     no-repeat center center;
   background-size: cover;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-  display: none; /* Hidden by default */
-  flex-direction: column;
   z-index: 1000;
-  overflow: hidden;
 }
 
 /* Chat Header */
@@ -47,8 +46,8 @@ body {
 
 /* Chat Body */
 #chat-body {
-  flex-grow: 1; /* This ensures that the chat body grows to fill available space */
-  overflow-y: auto; /* Allows scrolling for long content */
+  flex-grow: 1; /* Make the chat body grow to fill space */
+  overflow-y: auto; /* Enable scrolling for long content */
   padding: 10px;
   background: rgba(
     0,
@@ -82,7 +81,6 @@ body {
   padding: 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   background-color: rgba(0, 0, 0, 0.9); /* Input background contrast */
-  position: relative; /* Keep the input bar fixed at the bottom */
 }
 
 #user-input {
@@ -113,7 +111,7 @@ body {
 #chat-toggle-btn {
   position: fixed;
   bottom: 20px;
-  right: 20px; /* Keep the chat toggle button in the bottom-right corner */
+  right: 20px;
   background-color: rgba(0, 255, 255, 0.8);
   border: none;
   border-radius: 5px;
