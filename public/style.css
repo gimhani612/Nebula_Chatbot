@@ -1,4 +1,4 @@
-/* Body Background for the Galaxy Theme */
+/* Galaxy Background */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -8,65 +8,86 @@ body {
   color: white;
 }
 
-/* Chat Container */
-#chat-content {
-  width: 100%;
-  height: 400px;
-  overflow-y: scroll;
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+#chat-container {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  width: 350px;
+  max-height: 500px;
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  display: none; /* Hidden by default */
+  flex-direction: column;
 }
 
-/* Messages */
-.message {
+#chat-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#chat-header h2 {
+  margin: 0;
+}
+
+#close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#chat-body {
+  flex-grow: 1;
+  overflow-y: scroll;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#chat-content .message {
   margin: 10px 0;
   padding: 10px;
   border-radius: 8px;
-  max-width: 80%;
 }
 
 .user-message {
-  background-color: rgba(
-    75,
-    0,
-    130,
-    0.8
-  ); /* Indigo background for user messages */
+  background-color: rgba(75, 0, 130, 0.8);
   text-align: right;
 }
 
 .bot-message {
-  background-color: rgba(
-    255,
-    105,
-    180,
-    0.8
-  ); /* Light pink background for bot messages */
+  background-color: rgba(255, 105, 180, 0.8);
   text-align: left;
 }
 
-/* Input and Button */
-#user-input {
-  width: calc(100% - 100px);
+#chat-input {
+  display: flex;
   padding: 10px;
-  border-radius: 5px;
-  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#user-input {
+  flex-grow: 1;
+  padding: 10px;
   background: rgba(0, 0, 0, 0.8);
+  border: none;
+  border-radius: 5px;
   color: white;
-  margin-right: 10px;
 }
 
 #send-btn {
-  padding: 10px 20px;
-  background-color: rgba(0, 255, 255, 0.8); /* Cyan button color */
+  padding: 10px;
+  margin-left: 10px;
+  background-color: rgba(0, 255, 255, 0.8);
   border: none;
   border-radius: 5px;
   color: black;
   cursor: pointer;
-  font-weight: bold;
 }
 
 #send-btn:hover {
@@ -74,27 +95,21 @@ body {
   color: white;
 }
 
-/* Scrollbar Styling */
-#chat-content::-webkit-scrollbar {
-  width: 10px;
+/* Toggle Button */
+#chat-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 255, 255, 0.8);
+  border: none;
+  border-radius: 5px;
+  color: black;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-#chat-content::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 10px;
-}
-
-/* Starry effect for the chatbot area */
-#chat-content:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  background-image: url("https://static.vecteezy.com/system/resources/previews/016/586/629/original/twinkle-star-pattern-for-photo-effect-and-overlay-abstract-blurry-star-light-texture-for-background-png.png");
-  background-size: cover;
-  opacity: 0.3;
-  pointer-events: none;
+#chat-toggle-btn:hover {
+  background-color: rgba(0, 255, 255, 1);
+  color: white;
 }

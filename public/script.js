@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const chatContainer = document.getElementById("chat-container");
+  const chatToggleBtn = document.getElementById("chat-toggle-btn");
   const chatContent = document.getElementById("chat-content");
   const userInput = document.getElementById("user-input");
   const sendBtn = document.getElementById("send-btn");
+  const closeBtn = document.getElementById("close-btn");
 
   // Function to add messages to the chat
   function addMessage(content, sender) {
@@ -10,33 +13,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Convert newlines into <br> and handle bullet points
     const formattedContent = formatMessage(content);
-    messageElement.innerHTML = formattedContent; // Use innerHTML to render the formatted content
+    messageElement.innerHTML = formattedContent;
 
     chatContent.appendChild(messageElement);
     chatContent.scrollTop = chatContent.scrollHeight; // Scroll to bottom
   }
 
-  // Function to format the message (replacing newlines with <br> and handling bullet points)
+  // Function to format the message
   function formatMessage(content) {
-    // Convert bullet points (e.g., '- item' or '* item') into <ul><li> elements
     if (content.includes("\n")) {
       const lines = content.split("\n").map((line) => {
         if (line.startsWith("- ") || line.startsWith("* ")) {
           return `<li>${line.substring(2)}</li>`;
         } else {
-          return line; // Keep the rest of the message unchanged
+          return line;
         }
       });
 
-      // Check if there are any <li> tags in the content, wrap them in <ul> tags
       const hasBulletPoints = lines.some((line) => line.startsWith("<li>"));
       if (hasBulletPoints) {
         return `<ul>${lines.join("")}</ul>`;
       } else {
-        return lines.join("<br>"); // Use <br> for regular line breaks
+        return lines.join("<br>");
       }
     } else {
-      return content; // Return content as is if no newlines are found
+      return content;
     }
   }
 
@@ -47,14 +48,13 @@ document.addEventListener("DOMContentLoaded", () => {
     addMessage(message, "user");
     userInput.value = "";
 
-    // Send message to backend
     fetch("/webhook", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        session: "12345", // Replace with a unique session ID as needed
+        session: "12345",
         queryResult: { queryText: message },
       }),
     })
@@ -75,10 +75,22 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
-  // Event listener for send button
+  // Toggle Chat Window
+  chatToggleBtn.addEventListener("click", () => {
+    chatContainer.style.display = "block";
+    chatToggleBtn.style.display = "none";
+  });
+
+  // Close Chat
+  closeBtn.addEventListener("click", () => {
+    chatContainer.style.display = "none";
+    chatToggleBtn.style.display = "block";
+  });
+
+  // Send message on button click
   sendBtn.addEventListener("click", sendMessage);
 
-  // Event listener for Enter key
+  // Send message on Enter key press
   userInput.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
       sendMessage();
