@@ -1,28 +1,27 @@
-/* Galaxy Background */
+/* Main Body - Set a plain background for the rest of the page */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: url("https://m.media-amazon.com/images/I/81SNLEuNQuL._AC_UF894,1000_QL80_.jpg")
-    no-repeat center center fixed;
-  background-size: cover;
+  background-color: #1c1c1c; /* Plain dark background for the webpage */
   color: white;
 }
 
-/* Chatbot Container */
+/* Chatbot Container with Galaxy Background */
 #chat-container {
   position: fixed;
   bottom: 0;
   right: 20px;
   width: 350px;
-  height: 450px; /* Fixed height for the chat window */
-  max-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
+  height: 500px; /* Fixed height */
+  background: url("https://m.media-amazon.com/images/I/81SNLEuNQuL._AC_UF894,1000_QL80_.jpg")
+    no-repeat center center;
+  background-size: cover; /* Galaxy background within the chatbot box */
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-  display: none; /* Hidden by default */
+  display: none;
   flex-direction: column;
-  overflow: hidden; /* Prevent expanding beyond set height */
-  z-index: 1000; /* Ensure it's above other content */
+  overflow: hidden;
+  z-index: 1000;
 }
 
 /* Chat Header */
@@ -30,7 +29,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9); /* Slightly darker for contrast */
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -49,10 +48,18 @@ body {
 /* Chat Body */
 #chat-body {
   flex-grow: 1;
-  overflow-y: auto; /* Enables scrolling for long content */
+  overflow-y: auto; /* Allows scrolling */
   padding: 10px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Semi-transparent to show the galaxy background */
   border-radius: 10px;
+  max-height: calc(
+    100% - 60px
+  ); /* Ensures the chat body doesn't overflow the container */
 }
 
 /* Chat Messages */
@@ -77,6 +84,7 @@ body {
   display: flex;
   padding: 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.9); /* Input background contrast */
 }
 
 #user-input {
@@ -107,7 +115,7 @@ body {
 #chat-toggle-btn {
   position: fixed;
   bottom: 20px;
-  right: 20px; /* Move to the bottom right */
+  right: 20px;
   background-color: rgba(0, 255, 255, 0.8);
   border: none;
   border-radius: 5px;
